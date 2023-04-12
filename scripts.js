@@ -10,7 +10,6 @@ function changeText(){
     let resultado = encriptar(textoNormal.value);
     areaEncriptada.hidden = false;
     imagenEncriptado.hidden = true;
-    textoNormal.value = '';
     areaEncriptada.value = resultado;
     boton.hidden = false;
 }
@@ -26,7 +25,6 @@ function encriptar(valor) {
 
 function desencriptar(){
     areaEncriptada.value = textoNormal.value.replaceAll('enter','e').replaceAll('imes','i').replaceAll('ai','a').replaceAll('ober','o').replaceAll('ufat','u');
-    textoNormal.value = '';
 }
   
   function transformar(palabra){
@@ -51,6 +49,9 @@ function desencriptar(){
   }
 
   const copiar = () =>{
-    textoNormal.value = areaEncriptada.value;
-    areaEncriptada.value = '';
+    navigator.clipboard.writeText( areaEncriptada.value)
+    .catch(err => {
+        console.error('Error in copying text: ', err);
+    });
+
   }

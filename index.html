@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">Encriptador</header>
+    <header class="header">
+        <div class="logo"><img src="files/logo.png" id='logo' alt="Logo"></div>
+        <h1>Encriptador</h1>
+    </header>
     <div class="contenedor">
         <div class="input">
             <textarea name="texto" id="encriptar" cols="30" rows="10" placeholder="Ingresar texto aqui" onkeypress="return ((event.charCode <= 122 && event.charCode >= 97) || event.charCode == 32 || event.charCode ==241)"></textarea>

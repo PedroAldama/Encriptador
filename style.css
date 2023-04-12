@@ -18,10 +18,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    font-family: fantasy;
     background: lightcoral;
     padding: 10px;
+}
+.logo{
+    position: absolute;
+    left: 20px;
 }
 #encriptar{
     border: none;
