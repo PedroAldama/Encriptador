@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Chrome = 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">Encriptador</header>
+    <div class="contenedor">
+        <div class="input">
+            <textarea name="texto" id="encriptar" cols="30" rows="10" placeholder="Ingresar texto aqui" onkeypress="return ((event.charCode <= 122 && event.charCode >= 97) || event.charCode == 32 || event.charCode ==241)"></textarea>
+            <div class="botones">
+                <button class="btn-enc" onclick="changeText()">Encriptar</button>
+                <button class="btn-des" onclick="desencriptar()">Desencriptar</button>
+            </div>
+           
+        </div>
+        <div class="texto-encriptado">
+            <div class="areaDescencriptado">
+                <textarea name="texto-encriptado" id="encriptado" cols="30" rows="10" readonly="readonly" hidden="true"></textarea>
+                <button class="copy" id='btn-copy' hidden="true" onclick="copiar()">Copiar texto</button>
+            </div>
+            <img src="/files/1.png" alt="Texto no encontrado" id="imagenEncriptado">
+        </div>
+    </div>
+   <script src="scripts.js"></script>
+</body>
+</html>
